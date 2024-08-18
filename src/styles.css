@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #f9f9f9; /* Subtle light grey background for the whole page */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}

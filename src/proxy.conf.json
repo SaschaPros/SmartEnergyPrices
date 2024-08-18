@@ -1,0 +1,8 @@
+{
+  "/market/v1/price": {
+    "target": "https://apis.smartenergy.at",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
