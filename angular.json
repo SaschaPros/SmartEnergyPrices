@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "electricityPrices": {
+    "SmartEnergyPrices": {
       "projectType": "application",
       "schematics": {},
       "root": "",
