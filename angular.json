@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/electricity-prices",
+            "outputPath": "dist/smart-energy-prices",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "electricityPrices:build:production"
+              "buildTarget": "SmartEnergyPrices:build:production"
             },
             "development": {
-              "buildTarget": "electricityPrices:build:development"
+              "buildTarget": "SmartEnergyPrices:build:development"
             }
           },
           "options": {
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "electricityPrices:build"
+            "buildTarget": "SmartEnergyPrices:build"
           }
         },
         "test": {
