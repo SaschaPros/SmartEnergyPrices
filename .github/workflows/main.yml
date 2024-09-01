@@ -1,25 +1,23 @@
-name: Build and Deploy Script
+name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-    - name: Adding Node.js
-      uses: actions/setup-node@v4
+    - uses: actions/checkout@v4
+    - name: Angular Deployment
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
       with:
-        node-version: lts/*
-    - name: Install Dependencies
-      run: npm install
-    - name: Build Angular App
-      run: npm run build
-    - name: Deploy to GitHub Pages
-      run: |
-        npx angular-cli-ghpages --dir=dist/smart-energy-prices/browser
-      env:
-        CI: true
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        github_access_token: ${{ secrets.GH_TOKEN }}
+        build_configuration: production
+        base_href: /smartenergyprices/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+        deploy_branch: main
+        angular_dist_build_folder: dist/smart-energy-prices
+
+permissions:
+  contents: write
